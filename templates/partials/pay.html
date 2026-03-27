@@ -1,0 +1,30 @@
+<div class="pg" id="pay-pg">
+  <div class="slw">
+    <div class="stit tc" data-l="paiement">Finalisation de la commande</div>
+    <div class="gbar c"></div>
+    <div class="crd" style="padding:28px;margin-bottom:28px">
+      <div id="vsel"></div>
+      <hr style="border-color:var(--brd);margin:20px 0">
+      <div class="fl bw" style="margin-bottom:12px">
+        <div class="lbl">Quantité</div>
+        <div class="fl g12">
+          <button class="btn bh bs" onclick="cQty(-1)" style="width:32px;height:32px;padding:0">-</button>
+          <span id="p-qty" style="font-weight:700;font-family:'Orbitron',monospace">1</span>
+          <button class="btn bh bs" onclick="cQty(1)" style="width:32px;height:32px;padding:0">+</button>
+        </div>
+      </div>
+      <div class="fl bw"><span class="lbl">Total à payer</span><span id="vpt" class="vp" style="font-size:28px"></span></div>
+    </div>
+    <div class="crd" style="padding:28px">
+      <h3 style="font-family:'Playfair Display',serif;margin-bottom:20px">Informations de livraison</h3>
+      <div class="iw"><label class="lbl">Nom complet *</label><input class="fld" id="pay-n" placeholder="Jean Dupont"></div>
+      <div class="f2c">
+        <div class="iw"><label class="lbl">Email *</label><input class="fld" id="pay-e" placeholder="email@exemple.com"></div>
+        <div class="iw"><label class="lbl">Téléphone *</label><input class="fld" id="pay-p" placeholder="+228 90 00 00 00"></div>
+      </div>
+      <div class="iw"><label class="lbl">Adresse de livraison (Optionnel)</label><textarea class="fld" style="min-height:60px" placeholder="Lomé, Togo..."></textarea></div>
+      <button class="btn bg bf" style="margin-top:20px;padding:16px" onclick="pPay()">✅ Confirmer et payer</button>
+    </div>
+    <div id="p-pay" style="margin-top:20px"></div>
+  </div>
+</div>

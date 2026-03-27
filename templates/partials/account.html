@@ -1,0 +1,54 @@
+<!-- ACCOUNT -->
+<div class="pg" id="account-pg">
+  <div class="aw">
+    <nav class="an">
+      <div class="au2"><div class="aav" id="aav">D</div><div class="aun" id="aun">Denis Tchilabalo</div><span class="bdg b-ftr" id="arl">Acheteur</span></div>
+      <div class="ait">
+        <div class="ai on" onclick="sAT('db')">📊 Tableau de bord</div>
+        <div class="ai" onclick="sAT('fv')">♡ Mes favoris</div>
+        <div class="ai" onclick="sAT('or')">📋 Mes commandes</div>
+        <div class="ai" onclick="sAT('ls')">🚗 Mes annonces</div>
+        <div class="ai" onclick="sAT('ms')">💬 Messages <span class="nd"></span></div>
+        <div class="ai" onclick="sAT('st')">⚙️ Paramètres</div>
+        <hr style="border-color:var(--brd);margin:8px 0">
+        <div class="ai" onclick="logOut()" style="color:var(--red)">🚪 Déconnexion</div>
+      </div>
+    </nav>
+    <main>
+      <div class="at on" id="at-db">
+        <h2 style="font-family:'Playfair Display',serif;margin-bottom:20px">Tableau de bord</h2>
+        <div class="kr"><div class="kc"><div class="kn" id="kfv">0</div><div class="kl">Favoris</div></div><div class="kc"><div class="kn" id="kor">0</div><div class="kl">Commandes</div></div><div class="kc"><div class="kn" id="kls">0</div><div class="kl">Annonces</div></div><div class="kc"><div class="kn">5</div><div class="kl">Messages</div></div></div>
+        <h3 style="margin-bottom:14px;font-size:16px">Activité récente</h3>
+        <div class="af" id="acf"></div>
+      </div>
+      <div class="at" id="at-fv">
+        <h2 style="font-family:'Playfair Display',serif;margin-bottom:20px">Mes favoris</h2>
+        <div class="vg" id="fvg"></div>
+        <div class="nr hid" id="nfv"><div class="ni">♡</div><h3>Aucun favori</h3><button class="btn bg" style="margin-top:16px" onclick="P('catalogue')">Explorer le catalogue</button></div>
+      </div>
+      <div class="at" id="at-or">
+        <h2 style="font-family:'Playfair Display',serif;margin-bottom:20px">Mes commandes</h2>
+        <div id="orl"></div>
+      </div>
+      <div class="at" id="at-ls">
+        <div class="fl bw" style="margin-bottom:20px"><h2 style="font-family:'Playfair Display',serif">Mes annonces</h2><button class="btn bg bs" onclick="P('sell')">+ Nouvelle</button></div>
+        <div id="lsl"></div>
+      </div>
+      <div class="at" id="at-ms">
+        <h2 style="font-family:'Playfair Display',serif;margin-bottom:20px">Messages</h2><div id="msl"></div>
+      </div>
+      <div class="at" id="at-st">
+        <h2 style="font-family:'Playfair Display',serif;margin-bottom:20px">Paramètres</h2>
+        <div class="f2c" style="max-width:500px">
+          <div class="iw"><label class="lbl">Prénom</label><input class="fld" id="sfn" value="Denis"></div>
+          <div class="iw"><label class="lbl">Nom</label><input class="fld" id="sln" value="Tchilabalo"></div>
+          <div class="iw"><label class="lbl">Email</label><input class="fld" id="sem2" value="denistchil@gmail.com"></div>
+          <div class="iw"><label class="lbl">Téléphone</label><input class="fld" id="sph2" value="+22890567848"></div>
+        </div>
+        <button class="btn bg" onclick="saveSt()">Enregistrer</button>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ADMIN -->

@@ -1,0 +1,44 @@
+<!-- MODALS -->
+<div class="ov" id="ml" onclick="if(event.target===this)cM('ml')">
+  <div class="mod" style="max-width:420px">
+    <div class="mh"><h3>Connexion à Luxora Cars</h3><button class="mc" onclick="cM('ml')">✕</button></div>
+    <div class="mb">
+      <div id="lwrap">
+        <div class="iw"><label class="lbl">Email</label><input class="fld" type="email" id="lem" placeholder="votre@email.com"></div>
+        <div class="iw"><label class="lbl">Mot de passe</label><input class="fld" type="password" id="lpw" placeholder="••••••••"></div>
+        <button class="btn bg bf" style="margin-bottom:12px" onclick="doLogin()">Se connecter</button>
+        <p style="text-align:center;font-size:13px;color:var(--mut)">Pas de compte ? <span style="color:var(--gold);cursor:pointer" onclick="swReg()">S'inscrire</span></p>
+        <hr style="border-color:var(--brd);margin:14px 0">
+        <p style="font-size:12px;color:var(--mut);text-align:center;margin-bottom:8px">Démo rapide :</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+          <button class="btn bh bs" onclick="demoL('client')">👤 Client</button>
+          <button class="btn bo bs" onclick="demoL('admin')">🔑 Admin</button>
+        </div>
+      </div>
+      <div id="rwrap" style="display:none">
+        <div class="f2c"><div class="iw"><label class="lbl">Prénom</label><input class="fld" id="rfn" placeholder="Denis"></div><div class="iw"><label class="lbl">Nom</label><input class="fld" id="rln" placeholder="Tchilabalo"></div></div>
+        <div class="iw"><label class="lbl">Email</label><input class="fld" id="rem" placeholder="votre@email.com"></div>
+        <div class="iw"><label class="lbl">Téléphone</label><input class="fld" id="rph" placeholder="+228 90 56 78 48"></div>
+        <div class="iw"><label class="lbl">Mot de passe</label><input class="fld" type="password" id="rpw" placeholder="••••••••"></div>
+        <button class="btn bg bf" style="margin-bottom:12px" onclick="doReg()">Créer mon compte</button>
+        <p style="text-align:center;font-size:13px;color:var(--mut)">Déjà un compte ? <span style="color:var(--gold);cursor:pointer" onclick="swLog()">Se connecter</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ov" id="mp" onclick="if(event.target===this)cM('mp')">
+  <div class="mod"><div class="mh"><h3 id="ptit" style="font-family:'Playfair Display',serif">Réservation</h3><button class="mc" onclick="cM('mp')">✕</button></div><div class="mb" id="pbdy"></div></div>
+</div>
+
+<div class="ov" id="mc" onclick="if(event.target===this)cM('mc')">
+  <div class="mod" style="max-width:400px">
+    <div class="mh"><div class="fl g8"><div style="width:8px;height:8px;background:var(--grn);border-radius:50%;margin-top:6px"></div><h3>Chat en direct</h3></div><button class="mc" onclick="cM('mc')">✕</button></div>
+    <div class="mb">
+      <div id="chmsg" style="height:240px;overflow-y:auto;margin-bottom:14px;display:flex;flex-direction:column;gap:10px">
+        <div style="background:var(--bg3);padding:10px 14px;border-radius:12px 12px 12px 4px;max-width:85%"><p style="font-size:13px">Bonjour ! Je suis votre conseiller Luxora Cars. Comment puis-je vous aider ?</p><p style="font-size:11px;color:var(--mut);margin-top:4px">Conseiller · maintenant</p></div>
+      </div>
+      <div class="fl g8"><input class="fld" type="text" id="chin" placeholder="Votre message..." onkeypress="if(event.key==='Enter')sndCh()" style="flex:1;padding:9px 14px"><button class="btn bg bs" onclick="sndCh()">→</button></div>
+    </div>
+  </div>
+</div>

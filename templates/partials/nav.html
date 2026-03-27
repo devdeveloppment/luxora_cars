@@ -1,0 +1,49 @@
+{% load static %}
+<nav id="nav">
+  <div class="nlogo" onclick="P('home')">
+    <img src="{% static 'img/logo.png' %}" alt="Luxora Cars Logo" style="width:40px;height:40px;border-radius:50%">
+    Luxora Cars
+  </div>
+  <div class="nlinks">
+    <span class="nl on" id="nl-home" onclick="P('home')" data-l="accueil">Accueil</span>
+    <span class="nl" id="nl-catalogue" onclick="P('catalogue')" data-l="catalogue">Catalogue</span>
+    <span class="nl" id="nl-sell" onclick="P('sell')" data-l="vendre">Vendre</span>
+    <span class="nl" id="nl-contact" onclick="P('contact')" data-l="contact">Contact</span>
+  </div>
+  <div class="nacts fl g12">
+    <div class="fl g8">
+      <button class="btn bh bs th-tgl" onclick="tTheme()" style="font-size:18px;width:40px;height:40px">☀️</button>
+      <select class="btn bh bs lang-sel" style="padding:7px 8px;appearance:auto;background:none;border:1px solid rgba(255,255,255,0.15);color:inherit;font-size:13px" onchange="tLang(this.value)">
+        <option value="fr">🇫🇷 FR</option><option value="en">🇺🇸 EN</option>
+        <option value="es">🇪🇸 ES</option><option value="de">🇩🇪 DE</option>
+        <option value="zh">🇨🇳 ZH</option><option value="ar">🇸🇦 AR</option>
+      </select>
+    </div>
+    <div id="u-btns" class="fl g8">
+      <button class="btn bg bs" onclick="oM('ml')">Connexion</button>
+    </div>
+  </div>
+  <button id="ham" onclick="tMob()">☰</button>
+</nav>
+<div class="mm" id="mm">
+  <button style="position:absolute;top:20px;right:20px;background:none;border:none;color:var(--w);font-size:24px;cursor:pointer" onclick="tMob()">✕</button>
+  <span style="font-family:'Playfair Display',serif;font-size:22px;color:var(--gold);margin-bottom:8px">Luxora Cars</span>
+  <div class="fl g12" style="margin-bottom:16px">
+    <button class="btn bh bf th-tgl" onclick="tTheme()" style="flex:1">Alterner Thème ☀️/🌙</button>
+  </div>
+  <select class="btn bh bf lang-sel" style="margin-bottom:20px;appearance:auto;padding:12px;text-align:center;background:var(--bg3);border:1px solid var(--brd);color:var(--w)" onchange="tLang(this.value);tMob()">
+    <option value="fr">🇫🇷 Français</option>
+    <option value="en">🇺🇸 English</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="zh">🇨🇳 中文</option>
+    <option value="ar">🇸🇦 العربية</option>
+  </select>
+  <span class="flk" onclick="P('home');tMob()" data-l="accueil">Accueil</span>
+  <span class="flk" onclick="P('catalogue');tMob()">Catalogue</span>
+  <span class="flk" onclick="P('sell');tMob()">Vendre ma voiture</span>
+  <span class="flk" onclick="P('contact');tMob()">Contact</span>
+  <hr style="border-color:var(--brd);margin:4px 0">
+  <button class="btn bo bf" onclick="oM('ml');tMob()">Connexion</button>
+  <button class="btn bg bf" onclick="P('sell');tMob()">+ Publier une annonce</button>
+</div>

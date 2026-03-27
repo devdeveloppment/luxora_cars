@@ -1,0 +1,60 @@
+<!-- CATALOGUE -->
+<div class="pg" id="catalogue-pg">
+  <div class="chd"><span class="ey">Notre Collection</span><h1 class="stit" style="margin-top:8px">Catalogue de Véhicules</h1><div class="gbar"></div></div>
+  <div class="cly">
+    <aside class="sb">
+      <div class="sbh">Filtres <button class="btn bh bs" onclick="resetF()">Réinitialiser</button></div>
+      <div class="fs"><div class="fl2">Marque</div><div id="bf"></div></div>
+      <div class="fs">
+        <div class="fl2">Prix max (XOF)</div>
+        <input type="range" id="pr" min="0" max="1200000000" step="5000000" value="1200000000" oninput="onPS(this.value)">
+        <div class="pi"><input class="pi2" type="text" value="0" readonly><input class="pi2" type="text" id="pml" value="1 200 000 000"></div>
+      </div>
+      <div class="fs">
+        <div class="fl2">Carburant</div>
+        <div class="fps" id="fp">
+          <span class="fp on" onclick="sF2(this,'','fp')">Tous</span><span class="fp" onclick="sF2(this,'Essence','fp')">Essence</span>
+          <span class="fp" onclick="sF2(this,'Diesel','fp')">Diesel</span><span class="fp" onclick="sF2(this,'Hybride','fp')">Hybride</span>
+          <span class="fp" onclick="sF2(this,'Électrique','fp')">Électrique</span>
+        </div>
+      </div>
+      <div class="fs">
+        <div class="fl2">Carrosserie</div>
+        <div class="fps" id="bp">
+          <span class="fp on" onclick="sF2(this,'','bp')">Tous</span><span class="fp" onclick="sF2(this,'Berline','bp')">Berline</span>
+          <span class="fp" onclick="sF2(this,'SUV','bp')">SUV</span><span class="fp" onclick="sF2(this,'Coupé','bp')">Coupé</span>
+          <span class="fp" onclick="sF2(this,'Cabriolet','bp')">Cabriolet</span><span class="fp" onclick="sF2(this,'Supercar','bp')">Supercar</span>
+        </div>
+      </div>
+      <div class="fs">
+        <div class="fl2">Année min</div>
+        <select class="fld" id="yf" onchange="aF()">
+          <option value="">Toutes</option><option value="2020">2020+</option><option value="2021">2021+</option>
+          <option value="2022">2022+</option><option value="2023">2023+</option>
+        </select>
+      </div>
+      <div>
+        <div class="fl2">Statut</div>
+        <label class="fc"><input type="checkbox" id="fa" checked onchange="aF()"> Disponible</label>
+        <label class="fc"><input type="checkbox" id="fr" checked onchange="aF()"> Réservé</label>
+        <label class="fc"><input type="checkbox" id="fn2" onchange="aF()"> Nouveautés seulement</label>
+      </div>
+    </aside>
+    <main>
+      <div class="rb">
+        <p class="rc"><span id="rc">0</span> véhicules trouvés</p>
+        <div class="fl g8">
+          <input class="fld" style="width:200px;padding:7px 12px;font-size:13px" type="text" placeholder="🔍 Rechercher..." id="sq" oninput="aF()">
+          <select class="ss" id="so" onchange="aF()">
+            <option value="featured">Mis en avant</option><option value="price_asc">Prix ↑</option>
+            <option value="price_desc">Prix ↓</option><option value="year_desc">Année récente</option>
+          </select>
+        </div>
+      </div>
+      <div class="vg" id="cgrid"></div>
+      <div class="nr hid" id="nr"><div class="ni">🚗</div><h3>Aucun véhicule trouvé</h3><p style="font-size:13px;margin-top:6px">Modifiez vos filtres</p><button class="btn bo" style="margin-top:16px" onclick="resetF()">Réinitialiser</button></div>
+    </main>
+  </div>
+</div>
+
+<!-- DETAIL -->

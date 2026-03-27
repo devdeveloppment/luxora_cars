@@ -1,0 +1,65 @@
+<!-- SELL -->
+<div class="pg" id="sell-pg">
+  <div class="slw">
+    <span class="ey">Vendre mon véhicule</span>
+    <h1 class="stit" style="margin-top:8px;margin-bottom:6px">Publiez votre annonce</h1>
+    <p class="mut" style="margin-bottom:32px;font-size:14px">Créez votre annonce en 4 étapes simples.</p>
+    <div class="stb">
+      <div class="sti"><div class="scc cr" id="sc1">1</div></div><div class="sln" id="sl1"></div>
+      <div class="sti"><div class="scc" id="sc2">2</div></div><div class="sln" id="sl2"></div>
+      <div class="sti"><div class="scc" id="sc3">3</div></div><div class="sln" id="sl3"></div>
+      <div class="sti"><div class="scc" id="sc4">4</div></div>
+    </div>
+    <div class="slr"><span class="slbl cr">Infos véhicule</span><span class="slbl">Photos</span><span class="slbl">Tarification</span><span class="slbl">Publication</span></div>
+    <div class="sp on" id="sp1">
+      <div class="f2c">
+        <div class="iw"><label class="lbl">Marque *</label><select class="fld" id="sb"></select></div>
+        <div class="iw"><label class="lbl">Modèle *</label><input class="fld" id="sm" placeholder="Ex: 488 Spider"></div>
+        <div class="iw"><label class="lbl">Année *</label><input class="fld" type="number" id="sy" placeholder="2022" min="2000" max="2025"></div>
+        <div class="iw"><label class="lbl">Kilométrage</label><input class="fld" type="number" id="sk" placeholder="15000"></div>
+        <div class="iw"><label class="lbl">Carburant</label><select class="fld" id="sf"><option>Essence</option><option>Diesel</option><option>Hybride</option><option>Électrique</option></select></div>
+        <div class="iw"><label class="lbl">Transmission</label><select class="fld" id="st2"><option>Automatique</option><option>Manuelle</option></select></div>
+        <div class="iw"><label class="lbl">Carrosserie</label><select class="fld" id="sbo"><option>Berline</option><option>SUV</option><option>Coupé</option><option>Cabriolet</option><option>Supercar</option></select></div>
+        <div class="iw"><label class="lbl">Puissance (ch)</label><input class="fld" type="number" id="shp" placeholder="660"></div>
+        <div class="iw"><label class="lbl">Couleur</label><input class="fld" id="sc2" placeholder="Rouge Rosso Corsa"></div>
+        <div class="iw"><label class="lbl">État</label><select class="fld" id="sco"><option>Neuf</option><option>Comme neuf</option><option>Excellent</option><option>Très bon</option></select></div>
+      </div>
+      <div class="iw"><label class="lbl">Description</label><textarea class="fld" id="sd" placeholder="Décrivez votre véhicule..."></textarea></div>
+      <button class="btn bg" onclick="goStep(2)">Étape suivante : Photos →</button>
+    </div>
+    <div class="sp" id="sp2">
+      <div class="uz" id="uz" ondragover="event.preventDefault();this.classList.add('dov')" ondragleave="this.classList.remove('dov')" ondrop="onDr(event)">
+        <input type="file" accept="image/*" multiple onchange="onFl(this.files)">
+        <div style="font-size:40px;margin-bottom:12px">📷</div>
+        <p style="font-weight:500;margin-bottom:4px">Glissez vos photos ou cliquez pour télécharger</p>
+        <p class="mut" style="font-size:13px">Jusqu'à 20 photos · JPG, PNG, WebP · Max 10 Mo</p>
+      </div>
+      <div class="pht" id="pht"></div>
+      <div class="fl g8" style="margin-top:20px">
+        <button class="btn bh" onclick="goStep(1)">← Précédent</button>
+        <button class="btn bg" onclick="goStep(3)">Tarification →</button>
+      </div>
+    </div>
+    <div class="sp" id="sp3">
+      <div class="ec"><p class="mut" style="font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Estimation automatique du marché</p><div class="er" id="est">Calcul...</div><p class="mut" style="font-size:12px">Basé sur les véhicules similaires</p></div>
+      <div class="iw"><label class="lbl">Votre prix de vente (XOF) *</label><input class="fld" type="number" id="spr" placeholder="150000000"></div>
+      <div class="ltc">
+        <div class="ltci on" id="lt-std" onclick="sLT('std')"><div style="font-size:20px;margin-bottom:6px">📋</div><div style="font-weight:600;margin-bottom:4px">Standard</div><div class="ltp">Gratuit</div><div class="mut" style="font-size:11px">30 jours</div></div>
+        <div class="ltci" id="lt-pre" onclick="sLT('pre')"><div style="font-size:20px;margin-bottom:6px">⭐</div><div style="font-weight:600;margin-bottom:4px">Premium</div><div class="ltp">5 000 XOF</div><div class="mut" style="font-size:11px">60 jours</div></div>
+        <div class="ltci" id="lt-ftr" onclick="sLT('ftr')"><div style="font-size:20px;margin-bottom:6px">🏆</div><div style="font-weight:600;margin-bottom:4px">Vedette</div><div class="ltp">15 000 XOF</div><div class="mut" style="font-size:11px">Page accueil</div></div>
+      </div>
+      <div class="fl g8"><button class="btn bh" onclick="goStep(2)">← Précédent</button><button class="btn bg" onclick="goStep(4)">Vérification →</button></div>
+    </div>
+    <div class="sp" id="sp4">
+      <div id="spv" style="background:var(--bg2);border:1px solid var(--brd);border-radius:var(--r2);padding:24px;margin-bottom:20px"></div>
+      <div class="f2c">
+        <div class="iw"><label class="lbl">Votre nom *</label><input class="fld" id="snm" placeholder="Denis Tchilabalo"></div>
+        <div class="iw"><label class="lbl">Téléphone *</label><input class="fld" type="tel" id="sph" placeholder="+22890567848"></div>
+      </div>
+      <div class="iw"><label class="lbl">Email *</label><input class="fld" type="email" id="sem" placeholder="denistchil@gmail.com"></div>
+      <div class="fl g8"><button class="btn bh" onclick="goStep(3)">← Précédent</button><button class="btn bg bl" onclick="pubList()" style="flex:1">🚀 Publier mon annonce</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- ACCOUNT -->

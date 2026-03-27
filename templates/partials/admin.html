@@ -1,0 +1,71 @@
+<!-- ADMIN -->
+<div class="pg" id="admin-pg">
+  <div class="adl">
+    <aside class="ads">
+      <div style="font-family:'Playfair Display',serif;font-size:16px;color:var(--gold);margin-bottom:4px;padding:0 8px">Luxora Cars</div>
+      <div style="font-size:11px;color:var(--mut);padding:0 8px 16px;border-bottom:1px solid var(--brd);margin-bottom:16px">Administration</div>
+      <div class="ans"><div class="anl">Vue d'ensemble</div><div class="ani on" onclick="sAD('ov')">📊 Tableau de bord</div><div class="ani" onclick="sAD('an')">📈 Analytique</div></div>
+      <div class="ans"><div class="anl">Inventaire</div><div class="ani" onclick="sAD('veh')">🚗 Véhicules</div><div class="ani" onclick="sAD('av')">➕ Ajouter</div><div class="ani" onclick="sAD('pnd')">⏳ En attente</div></div>
+      <div class="ans"><div class="anl">Commerce</div><div class="ani" onclick="sAD('ord')">📋 Commandes</div><div class="ani" onclick="sAD('pay')">💳 Paiements</div></div>
+      <div class="ans"><div class="anl">Utilisateurs</div><div class="ani" onclick="sAD('usr')">👥 Utilisateurs</div></div>
+      <hr style="border-color:var(--brd);margin:16px 0">
+      <div class="ani" onclick="P('home')" style="color:var(--mut)">← Retour au site</div>
+    </aside>
+    <main class="adc">
+      <header class="adh fl bw" style="padding-bottom:18px;border-bottom:1px solid var(--brd);margin-bottom:24px">
+        <div style="font-family:'Playfair Display',serif;font-weight:600;font-size:18px" data-l="accueil">Vue d'ensemble</div>
+        <div class="fl g12">
+          <button class="btn bh bs th-tgl" onclick="tTheme()" style="font-size:16px;width:38px;height:38px">☀️</button>
+          <select class="btn bh bs lang-sel" style="padding:6px 10px;appearance:auto;background:none;border:1px solid rgba(255,255,255,0.1);color:inherit;font-size:12px" onchange="tLang(this.value)">
+            <option value="fr">🇫🇷 FR</option><option value="en">🇺🇸 EN</option>
+            <option value="es">🇪🇸 ES</option><option value="de">🇩🇪 DE</option>
+            <option value="zh">🇨🇳 ZH</option><option value="ar">🇸🇦 AR</option>
+          </select>
+        </div>
+      </header>
+      <div class="adtb on" id="adt-ov">
+        <h2 style="font-family:'Playfair Display',serif;margin-bottom:22px">Tableau de bord</h2>
+        <div class="adk"><div class="adki"><div class="adkn" id="akv">0</div><div class="adkl">Véhicules</div><div class="adkc">+12% ce mois</div></div><div class="adki"><div class="adkn" id="akr">48.5M</div><div class="adkl">Revenus XOF</div><div class="adkc">+8.3%</div></div><div class="adki"><div class="adkn" id="ako">0</div><div class="adkl">Commandes</div><div class="adkc">+5 semaine</div></div><div class="adki"><div class="adkn" id="aku">128</div><div class="adkl">Utilisateurs</div><div class="adkc">+23 nouveaux</div></div></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div class="crd" style="padding:20px"><h4 style="margin-bottom:16px;font-size:14px;color:var(--mut)">COMMANDES RÉCENTES</h4><div id="rco"></div></div>
+          <div class="crd" style="padding:20px"><h4 style="margin-bottom:16px;font-size:14px;color:var(--mut)">ANNONCES EN ATTENTE</h4><div id="rpn"></div></div>
+        </div>
+      </div>
+      <div class="adtb" id="adt-veh"><div class="fl bw" style="margin-bottom:20px"><h2 style="font-family:'Playfair Display',serif">Véhicules</h2><button class="btn bg bs" onclick="sAD('av')">+ Ajouter</button></div><div style="overflow-x:auto"><table class="dtb"><thead><tr><th>Photo</th><th>Véhicule</th><th>Année</th><th>Prix</th><th>Statut</th><th>Vues</th><th>Actions</th></tr></thead><tbody id="avb"></tbody></table></div></div>
+      <div class="adtb" id="adt-av">
+        <h2 style="font-family:'Playfair Display',serif;margin-bottom:22px">Ajouter un véhicule</h2>
+        <div class="f2c" style="max-width:700px">
+          <div class="iw"><label class="lbl">Marque *</label><select class="fld" id="avbr"></select></div>
+          <div class="iw"><label class="lbl">Modèle *</label><input class="fld" id="avm" placeholder="Ex: 488 Spider"></div>
+          <div class="iw"><label class="lbl">Année</label><input class="fld" type="number" id="avy" placeholder="2023"></div>
+          <div class="iw"><label class="lbl">Prix (XOF)</label><input class="fld" type="number" id="avp" placeholder="150000000"></div>
+          <div class="iw"><label class="lbl">Kilométrage</label><input class="fld" type="number" id="avk" placeholder="12000"></div>
+          <div class="iw"><label class="lbl">Puissance (ch)</label><input class="fld" type="number" id="avh" placeholder="660"></div>
+          <div class="iw"><label class="lbl">Carburant</label><select class="fld" id="avf"><option>Essence</option><option>Diesel</option><option>Hybride</option><option>Électrique</option></select></div>
+          <div class="iw"><label class="lbl">Transmission</label><select class="fld" id="avt"><option>Automatique</option><option>Manuelle</option></select></div>
+          <div class="iw"><label class="lbl">Carrosserie</label><select class="fld" id="avbo"><option>Berline</option><option>SUV</option><option>Coupé</option><option>Cabriolet</option><option>Supercar</option></select></div>
+          <div class="iw"><label class="lbl">Couleur</label><input class="fld" id="avc" placeholder="Noir Métallisé"></div>
+          <div class="iw"><label class="lbl">0-100 km/h</label><input class="fld" id="ava" placeholder="3.2s"></div>
+          <div class="iw"><label class="lbl">Vidéo (YouTube ID)</label><input class="fld" id="avvid" placeholder="Ex: d_N5mH2P2YI"></div>
+        </div>
+        <div class="iw" style="max-width:700px"><label class="lbl">Description</label><textarea class="fld" id="avd" placeholder="Description..."></textarea></div>
+        <div style="display:flex;gap:16px;margin-top:4px">
+          <label class="fc"><input type="checkbox" id="avft"> Mettre en vedette</label>
+          <label class="fc" style="margin-left:16px"><input type="checkbox" id="avnw" checked> Nouveau</label>
+        </div>
+        <button class="btn bg" style="margin-top:16px" onclick="admAddV()">✅ Ajouter le véhicule</button>
+      </div>
+      <div class="adtb" id="adt-pnd"><h2 style="font-family:'Playfair Display',serif;margin-bottom:20px">Annonces en attente</h2><div id="pnl"></div></div>
+      <div class="adtb" id="adt-ord"><h2 style="font-family:'Playfair Display',serif;margin-bottom:20px">Commandes & Réservations</h2><div style="overflow-x:auto"><table class="dtb"><thead><tr><th>N° Commande</th><th>Véhicule</th><th>Client</th><th>Méthode</th><th>Montant</th><th>Statut</th><th>Actions</th></tr></thead><tbody id="aob"></tbody></table></div></div>
+      <div class="adtb" id="adt-pay"><h2 style="font-family:'Playfair Display',serif;margin-bottom:20px">Paiements CinetPay</h2><div style="overflow-x:auto"><table class="dtb"><thead><tr><th>ID Transaction</th><th>Commande</th><th>Méthode</th><th>Montant</th><th>Statut</th><th>Date</th></tr></thead><tbody id="apb"></tbody></table></div></div>
+      <div class="adtb" id="adt-an">
+        <h2 style="font-family:'Playfair Display',serif;margin-bottom:20px">Analytique</h2>
+        <div class="adk"><div class="adki"><div class="adkn">12 840</div><div class="adkl">Pages vues</div></div><div class="adki"><div class="adkn">3 247</div><div class="adkl">Visiteurs</div></div><div class="adki"><div class="adkn">4.8%</div><div class="adkl">Conversion</div></div><div class="adki"><div class="adkn">3m 42s</div><div class="adkl">Durée session</div></div></div>
+        <div class="crd" style="padding:20px"><h4 style="color:var(--mut);font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px">VENTES PAR MARQUE</h4><div id="bst"></div></div>
+      </div>
+      <div class="adtb" id="adt-usr"><h2 style="font-family:'Playfair Display',serif;margin-bottom:20px">Utilisateurs</h2><div style="overflow-x:auto"><table class="dtb"><thead><tr><th>Utilisateur</th><th>Email</th><th>Rôle</th><th>Inscription</th><th>Statut</th></tr></thead><tbody id="aub"></tbody></table></div></div>
+    </main>
+  </div>
+</div>
+
+<!-- CONTACT -->

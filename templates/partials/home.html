@@ -1,0 +1,90 @@
+{% load static %}
+<div class="pg on" id="home-pg">
+  <section id="hero">
+    <div class="hbg">
+      <img src="{% static 'img/hero1.png' %}" alt="Luxora Cars — Rolls-Royce Cullinan">
+      <img src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=1920&q=80" alt="Luxora Cars — Ferrari">
+      <img src="{% static 'img/hero2.png' %}" alt="Luxora Cars — McLaren">
+      <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1920&q=80" alt="Luxora Cars — Aston Martin">
+      <img src="{% static 'img/hero3.png' %}" alt="Luxora Cars — Lamborghini">
+      <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=1920&q=80" alt="Luxora Cars — Porsche">
+      <img src="https://images.unsplash.com/photo-1561632702-b87e24a54d3c?w=1920&q=80" alt="Luxora Cars — Mercedes-Benz">
+      <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1920&q=80" alt="Luxora Cars — BMW">
+      <img src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=1920&q=80" alt="Luxora Cars — Bentley">
+      <img src="https://images.unsplash.com/photo-1621135802920-133df287f89c?w=1920&q=80" alt="Luxora Cars — Bugatti">
+    </div>
+    <div class="hov"></div><div class="hgl"></div>
+    <div class="light-ray"></div>
+    <div class="hcnt">
+      <div class="hey" data-l="marketplace">★ La Marketplace Automobile de Luxe</div>
+      <h1 class="ht"><span data-l="conduisez">Conduisez</span><em data-l="extraordinaire">l'Extraordinaire</em></h1>
+      <p class="hs">Découvrez une sélection exclusive de supercars et véhicules premium des plus grandes marques mondiales.</p>
+      <div class="hctas">
+        <button class="btn bg bl" onclick="P('catalogue')" data-l="explorer">Explorer la Collection →</button>
+        <button class="btn bo bl" onclick="P('sell')" data-l="vendre_ma_voiture">Vendre ma voiture</button>
+      </div>
+      <div class="hst">
+        <div><div class="stn" id="cnt-v">248+</div><div class="stl" data-l="disponibles">Véhicules disponibles</div></div>
+        <div><div class="stn" id="cnt-b">12</div><div class="stl" data-l="grandes_marques">Grandes marques</div></div>
+        <div><div class="stn">4.9★</div><div class="stl" data-l="note_clients">Note clients</div></div>
+        <div><div class="stn">98%</div><div class="stl" data-l="clients_satisfaits">Clients satisfaits</div></div>
+      </div>
+    </div>
+  </section>
+  <div id="qs">
+    <div class="qsg">
+      <div><label class="lbl">Marque</label><select class="fld" id="qb"></select></div>
+      <div><label class="lbl">Budget max (XOF)</label>
+        <select class="fld" id="qbu">
+          <option value="">Tous budgets</option>
+          <option value="50000000">50 000 000</option><option value="100000000">100 000 000</option>
+          <option value="200000000">200 000 000</option><option value="500000000">500 000 000</option>
+        </select>
+      </div>
+      <div><label class="lbl">Type</label>
+        <select class="fld" id="qt">
+          <option value="">Tous types</option><option>Berline</option><option>SUV</option>
+          <option>Coupé</option><option>Cabriolet</option><option>Supercar</option>
+        </select>
+      </div>
+      <button class="btn bg" onclick="doQS()">🔍 Rechercher</button>
+    </div>
+  </div>
+  <section id="brands" style="padding-top:72px">
+    <div class="sh">
+      <div><span class="ey" data-l="nos_marques">Nos Marques</span><h2 class="stit" style="margin-top:8px" data-l="maisons">Les plus grandes maisons automobiles</h2><div class="gbar"></div></div>
+    </div>
+    <div class="tkr" id="brand-ticker" style="margin:24px 0"></div>
+    <div class="bgr" id="bgrid"></div>
+  </section>
+  <section id="featured">
+    <div class="sh">
+      <div><span class="ey" data-l="selection">Sélection du moment</span><h2 class="stit" style="margin-top:8px">Véhicules en Vedette</h2><div class="gbar"></div></div>
+      <button class="btn bo" onclick="P('catalogue')">Voir tout le catalogue →</button>
+    </div>
+    <div class="vg" id="fgrid"></div>
+  </section>
+  <section id="why">
+    <div class="tc">
+      <span class="ey">Nos Engagements</span>
+      <h2 class="stit" style="margin-top:8px" data-l="pourquoi">Pourquoi choisir Luxora Cars</h2>
+      <div class="gbar c"></div>
+    </div>
+    <div class="wg">
+      <div class="wc"><div class="wi">🛡️</div><div class="wt">Inventaire Certifié</div><p class="wx">Chaque véhicule passe un contrôle rigoureux en 150 points avant mise en vente.</p></div>
+      <div class="wc"><div class="wi">👑</div><div class="wt">Service Haut de Gamme</div><p class="wx">Un conseiller dédié vous accompagne du premier regard jusqu'à la livraison.</p></div>
+      <div class="wc"><div class="wi">💳</div><div class="wt">Paiement Sécurisé</div><p class="wx">Paiement via CinetPay — Wave, Orange Money, MTN MoMo, Carte bancaire.</p></div>
+      <div class="wc"><div class="wi">🔄</div><div class="wt">Reprise Possible</div><p class="wx">Estimation gratuite de votre véhicule pour financer votre prochain achat.</p></div>
+    </div>
+  </section>
+  <section id="testi">
+    <div class="tc"><span class="ey">Témoignages</span><h2 class="stit" style="margin-top:8px" data-l="temoignages">Ce que disent nos clients</h2><div class="gbar c"></div></div>
+    <div class="tg">
+      <div class="tc2"><div class="ts">★★★★★</div><p class="tt">Service exceptionnel, j'ai trouvé ma Ferrari 488 en moins de 48h. L'équipe est vraiment professionnelle.</p><div class="tn">Kofi Mensah</div><div class="tl">Abidjan, Côte d'Ivoire</div></div>
+      <div class="tc2"><div class="ts">★★★★★</div><p class="tt">Le paiement via CinetPay était simple et sécurisé. Ma Porsche 911 est arrivée en parfait état.</p><div class="tn">Amina Diallo</div><div class="tl">Lomé, Togo</div></div>
+      <div class="tc2"><div class="ts">★★★★★</div><p class="tt">J'ai vendu mon BMW en 3 jours. L'estimation automatique était très précise. Je recommande vivement.</p><div class="tn">Ibrahim Touré</div><div class="tl">Dakar, Sénégal</div></div>
+    </div>
+  </section>
+</div>
+
+<!-- CATALOGUE -->

@@ -54,6 +54,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
 #nav{position:fixed;top:0;left:0;right:0;z-index:500;height:70px;display:flex;align-items:center;padding:0 clamp(16px,4vw,64px);background:rgba(10,10,15,.95);backdrop-filter:blur(18px);border-bottom:1px solid var(--brd)}
 .nlogo{display:flex;align-items:center;gap:10px;font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--gold);cursor:pointer;flex-shrink:0}
 .nlogo svg{width:36px;height:36px}
+.nlogo img{width:auto;max-height:36px;height:auto;border-radius:0;object-fit:contain}
 .nlinks{display:flex;align-items:center;gap:28px;margin:0 auto}
 .nl{font-size:13.5px;font-weight:500;color:var(--mut);cursor:pointer;transition:color .2s}
 .nl:hover,.nl.on{color:var(--gold)}
@@ -262,8 +263,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
 <body>
 <nav id="nav">
   <div class="nlogo" onclick="P('home')">
-    <svg viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#D4AF37" stroke-width="1.5"/><path d="M8 20 Q12 14 18 13 Q24 12 28 16 L26 20 L10 20Z" fill="none" stroke="#D4AF37" stroke-width="1.2"/><path d="M10 20 Q12 22 16 22 L28 20" fill="none" stroke="#D4AF37" stroke-width="1"/><circle cx="13" cy="21.5" r="2" fill="#D4AF37" opacity=".7"/><circle cx="24" cy="21.5" r="2" fill="#D4AF37" opacity=".7"/></svg>
-    Luxora Cars
+    <img src="static/img/logo.png" alt="Luxora Cars Logo" class="nlogo-img">
   </div>
   <div class="nlinks">
     <span class="nl on" id="nl-home" onclick="P('home')">Accueil</span>
@@ -280,7 +280,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
 </nav>
 <div class="mm" id="mm">
   <button style="position:absolute;top:20px;right:20px;background:none;border:none;color:var(--w);font-size:24px;cursor:pointer" onclick="tMob()">✕</button>
-  <span style="font-family:'Playfair Display',serif;font-size:22px;color:var(--gold);margin-bottom:8px">Luxora Cars</span>
+  <img src="static/img/logo.png" alt="Luxora Cars Logo" class="nlogo-img" style="max-height:48px;margin-bottom:8px">
   <span class="flk" onclick="P('home');tMob()">Accueil</span>
   <span class="flk" onclick="P('catalogue');tMob()">Catalogue</span>
   <span class="flk" onclick="P('sell');tMob()">Vendre ma voiture</span>

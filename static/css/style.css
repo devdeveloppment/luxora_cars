@@ -44,12 +44,13 @@ body.light-mode .bh{background:rgba(0,0,0,.04);color:var(--w);border-color:rgba(
 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;border-radius:2px;background:var(--bg4);outline:none}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:16px;height:16px;border-radius:50%;background:var(--gold);cursor:pointer;border:2px solid var(--bg2)}
 /* NAV */
-#nav{position:fixed;top:0;left:0;right:0;z-index:500;height:70px;display:flex;align-items:center;padding:0 clamp(16px,4vw,64px);background:rgba(10,10,15,.95);backdrop-filter:blur(18px);border-bottom:1px solid var(--brd)}
-.nlogo{display:flex;align-items:center;gap:10px;font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--gold);cursor:pointer;flex-shrink:0}
-.nlogo svg{width:36px;height:36px}
-.nlinks{display:flex;align-items:center;gap:28px;margin:0 auto}
-.nl{font-size:13.5px;font-weight:500;color:var(--mut);cursor:pointer;transition:color .2s}
-.nl:hover,.nl.on{color:var(--gold)}
+#nav{position:fixed;top:0;left:0;right:0;z-index:500;height:75px;display:flex;align-items:center;padding:0 clamp(20px,5vw,60px);background:linear-gradient(to bottom, rgba(10,10,15,0.98), rgba(10,10,15,0.95));backdrop-filter:blur(20px);border-bottom:1px solid var(--brd);box-shadow:0 8px 30px rgba(0,0,0,0.4)}
+.nlogo{display:flex;align-items:center;gap:12px;font-family:'Playfair Display',serif;font-size:23px;font-weight:700;color:var(--gold);cursor:pointer;flex-shrink:0;transition:transform .3s;letter-spacing:0.01em}.nlogo:hover{transform:scale(1.02)}
+.nlogo img{width:auto;max-height:45px;height:auto;border-radius:0;object-fit:contain;border:none}
+.nlinks{display:flex;align-items:center;gap:36px;margin:0 auto}
+.nl{font-size:14.5px;font-weight:600;color:var(--mut);cursor:pointer;transition:all .3s;letter-spacing:0.05em;text-transform:uppercase;font-family:'Outfit',sans-serif;position:relative}
+.nl::after{content:'';position:absolute;bottom:-6px;left:50%;width:0;height:2px;background:var(--gold);transition:all .3s;transform:translateX(-50%)}
+.nl:hover{color:var(--w)}.nl:hover::after,.nl.on::after{width:100%}.nl.on{color:var(--gold);text-shadow:0 0 10px rgba(212,175,55,0.3)}
 .nacts{display:flex;align-items:center;gap:10px}
 .fnb{position:relative}.fnn{position:absolute;top:-6px;right:-6px;background:var(--gold);color:#000;width:18px;height:18px;border-radius:50%;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center}
 #ham{display:none;background:none;color:var(--w);font-size:22px;cursor:pointer}

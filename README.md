@@ -21,4 +21,10 @@ Luxora Cars est une plateforme premium dédiée aux supercars et véhicules d'ex
 3. Lancez les migrations : `python manage.py migrate`
 4. Exécutez le serveur : `python manage.py runserver`
 
+## Captures d'écran
+Le dossier `screenshots/` contient les images de l'interface utilisateur pour le projet :
+- `dashboard...`
+- `home...`
+- `vehicle...`
+
 Développé par [Denis](https://github.com/devdeveloppment).
